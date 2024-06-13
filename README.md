@@ -165,7 +165,7 @@ Fluent Bit that you deploy in this procedure are versions of the ones available 
 1.  In the **Logs field explorer**, select **test-logger** for **CONTAINER_NAME**. After you add the `log` field to the summary line, you should see logs similar
     to the following:
 
-    ![fluentbit-filter-before](https://storage.googleapis.com/gcp-community/tutorials/kubernetes-engine-customize-fluentbit/fluentbit-filter-before.png)
+    ![fluentbit-filter-before](img/fluentbit-filter-before.png)
 
 ## Filtering information from the log file
 
@@ -211,7 +211,7 @@ In this section, you change `kubernetes/fluentbit-daemonset.yaml` to mount the `
 1.  When the rollout is complete, refresh the Cloud Logging logs and make sure that the Social Security number, credit card number, and email address data has 
     been filtered out.
 
-    ![fluentbit-filter-after](https://storage.googleapis.com/gcp-community/tutorials/kubernetes-engine-customize-fluentbit/fluentbit-filter-after.png)
+    ![fluentbit-filter-after](img/fluentbit-filter-after.png)
 
 ## Cleaning up: deleting the GKE cluster
 
