@@ -1,16 +1,6 @@
----
-title: Customizing Fluent Bit for Google Kubernetes Engine logs 
-description: Learn how to customize Fluent Bit for Google Kubernetes Engine logs.
-author: xiangshen-dk
-tags: logging, stackdriver, gke, fluent-bit
-date_published: 2020-11-25
----
+This tutorial was initialy published in [the Google Cloud Community repository](https://github.com/GoogleCloudPlatform/community). Since the repo has been archived, it is moved here.
 
-Xiang Shen | Solutions Architect | Google
-
-<p style="background-color:#CAFACA;"><i>Contributed by Google employees.</i></p>
-
-This tutorial describes how to customize [Fluent Bit](https://fluentbit.io/) logging for a [Google Kubernetes Engine](https://cloud.google.com/kubernetes-engine)
+The tutorial describes how to customize [Fluent Bit](https://fluentbit.io/) logging for a [Google Kubernetes Engine](https://cloud.google.com/kubernetes-engine)
 cluster. In this tutorial, you learn how to host your own configurable Fluent Bit daemonset to send logs to Cloud Logging, instead of selecting the Cloud Logging
 option when creating the Google Kubernetes Engine (GKE) cluster, which does not allow configuration of the Fluent Bit daemon.
 
@@ -37,7 +27,7 @@ $1.14 for 8 hours.
 
 1.  In the Cloud Console, on the [project selector page](https://console.cloud.google.com/projectselector2/home/dashboard), select or create a Cloud project.  
 
-    **Note**: If you don't plan to keep the resources that you create in this procedure, create a project instead of selecting an existing project. After you 
+    **Note**: If you don't plan to keep the resources you create in this procedure, create a project instead of selecting an existing one. After you 
     finish this tutorial, you can delete the project, removing all resources associated with the project.  
 
 1.  Make sure that billing is enabled for your Google Cloud project.
@@ -54,7 +44,7 @@ In this section, you define variables that control where elements of the infrast
 
 1.  [Open Cloud Shell](https://console.cloud.google.com/?cloudshell=true).
 
-1.  Set the variables used by this tutorial:
+1.  Set the variables used in this tutorial:
 
         export region=us-east1
         export zone=${region}-b
@@ -71,13 +61,13 @@ In this section, you define variables that control where elements of the infrast
 
 1.  Clone the sample repository:
 
-        git clone https://github.com/GoogleCloudPlatform/community.git
+        git clone https://github.com/xiangshen-dk/kubernetes-engine-customize-fluentbit.git
 
     The sample repository includes the Kubernetes manifests for the Fluent Bit daemonset and a test logging program that you deploy.
 
 1.  Go to the directory for this tutorial in the cloned repository:
 
-        cd community/tutorials/kubernetes-engine-customize-fluentbit
+        cd kubernetes-engine-customize-fluentbit
 
 1.  Create the GKE cluster with system-only logging turned on:
 
